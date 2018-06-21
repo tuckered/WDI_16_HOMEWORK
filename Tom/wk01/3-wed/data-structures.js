@@ -115,8 +115,13 @@ for (var i = 0; i < books.length; i++) {
      
 }
 
-function movie () {
-    console.log(favMovie.title + ' lasts for ' + favMovie.duration + ' terror fuelled minutes. \nIt stars: ' + favMovie.stars + 'and has a ' + favMovie.rating + ' rating on TMDB.') 
-}
-movie()
+// function movie () {
+//     console.log(favMovie.title + ' lasts for ' + favMovie.duration + ' terror fuelled minutes. \nIt stars: ' + favMovie.stars + 'and has a ' + favMovie.rating + ' rating on TMDB.') 
+// }
+// movie()
 
+var movieInfo = function(movie) {
+    return movie.title
+}
+
+console.log(movieInfo)
