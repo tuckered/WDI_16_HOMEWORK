@@ -1,20 +1,45 @@
-console.log('toot toot')
+// console.log('toot toot')
+
+//TO USE? 
+// arr.indexOf(searchElement[, fromIndex])
 
 // start and end stations will want to referenece the index within the array
 // 
 
-var alamein = ['Finders Street', 'Richmond', 'Burnley', 'Glenferrie']
-var glenwaverly = ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga']
-var sandringham = ['Southern Cross', 'Richmond', 'South Yarra', ' Prahran', 'Windsor']
-
-var start = 'Flinders Street'
-var end = 'South Yarra'
+// OTHER TWO ARRAYS
 
 
-var alamein2 = {
-    glen: ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga'],
-    sand: ['Southern Cross', 'Richmond', 'South Yarra', ' Prahran', 'Windsor']
+var trainLines = {
+
+glenwaverly: ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga'],
+
+sandringham: ['Southern Cross', 'Richmond', 'South Yarra', ' Prahran', 'Windsor'],
+
+alamein: ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'],
+
 }
 
-if start = flinders && end = south yarra
-return alamein[1] + [2] && sandringham[0] + [1]
+var alamein = ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie']
+
+var depart = "Glenferrie"
+var arrive = "Flinders Street"
+var indexDepart = alamein.indexOf(depart)
+var indexArrive = alamein.indexOf(arrive)
+
+var trip = alamein.slice(indexDepart, indexArrive + 1)
+var tripReversed = alamein.slice(indexArrive, indexDepart + 1).reverse()
+
+if (indexDepart > indexArrive) {
+    console.log(tripReversed.join(" -----> "))
+} else console.log(trip.join(" -----> "))
+
+if (indexDepart > indexArrive) {
+    console.log('Number of stops ' + (indexDepart - indexArrive))
+} else console.log('Number of stops ' + (indexArrive - indexDepart))
+
+
+
+// var lineNames = Object.keys(trainLines)
+// for (var i = 0; i < lineNames.length; i++) {
+//   console.log(trainLines[lineNames[i]])
+// }
