@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box
+}
+
+
+body {
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family: 'Josefin Slab', serif;
+  /* background-image: url(checkerdgrey.jpg); */
+  /* background-image: url(triangles.jpg); */
+  background-color: rgba(185, 189, 184, 0.198);
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5em;
+}
+
+img {
+  /* border: 2px solid black; */
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  justify-content: left;
+}
+
+.bank-name {
+  /* border: 2px solid black; */
+}
+
+.boxes {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: auto;
+}
+
+.savings, .checking {
+  /* border: 1px solid black; */
+  height: 20em;
+  width: 15em;
+  font-size: 1.5em;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 3px 5px rgba(63, 62, 62, 0.568);
+  background-color: antiquewhite;
+  border-radius: 25px 25px 25px 25px;
+}
+
+.savings {
+  background-color: #e1d1ec;
+  opacity: 0.8;
+}
+
+.savings-empty {
+  background-color: rgb(190, 54, 54);
+}
+
+.checking {
+  opacity: 0.8;
+}
+.savingsInput, .checkingInput {
+  padding: 15px;
+  font-size: 0.8em;
+  opacity: 1;
+  width: 100%;
+  box-shadow: 3px 5px rgba(10, 10, 10, 0.856);
+}
+
+button {
+  padding: 5px;
+  margin: 20px;
+  opacity: 0.8;
+  border-radius: 20px 7px 20px 7px;
+  box-shadow: 1px 3px rgba(10, 10, 10, 0.856);
+  font-weight: 100;
+  font-size: 0.6em;
+  background-color: rgb(255, 255, 255);
+}
+
+.savingsBalance, .checkingBalance {
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ORIGINAL CSS FIRST ATTEMPT
+/* div {
+  display: flex;
+
+} */
+/* 
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.online-bank {
+  font-size: 1.5em;
+  padding: 40px;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 15px;
+}
+
+ .boxes {
+  display: flex;
+  justify-content: center;
+} 
+
+.logo {
+  border: 2px solid black;
+  background-color: rgb(201, 5, 5);
+  margin: 30px;
+  width: 35%;
+  height: 4em;
+  font-size: 1em;
+}
+
+.online-bank {
+  display: flex;
+  justify-content: center;
+}
+
+.savings, .checking {
+  display: flex;
+  justify-content: flex-start;
+  border: 2px solid black;
+  background-color: rgb(231, 69, 69);
+  /* height: 60%; */
+  /* display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: center;
+  margin: 40px;
+  font-size: 25px;
+  height: 12em;
+  box-shadow: 20px;
+}
+
+.savingsTotal, .checkingTotal {
+  display: flex;
+  justify-content: center;
+  font-size: 0.7em;
+  margin-bottom: -10px;
+  border: 2px solid black;
+}
+
+.savingsInput, .checkingInput {
+  font-size: 2em;
+}
+
+.checking {
+  background-color: rgb(167, 236, 111);
+}
+
+button {
+  background-color:lightgray;
+  margin: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 0.5em;
+}
+
+.savingsInput, .checkingInput {
+  background-color: rgb(8, 155, 118);
+  color: white;
+  height: 50px;
+  width: 80%;
+  font-size: 0.9em;
+}
+
+.savingsTotal, .checkingTotal {
+  margin: 20px;
+  height: 100%;
+}
+
+.savingsBalance, .checkingBalance {
+  padding: 20px;
+}  */ */
