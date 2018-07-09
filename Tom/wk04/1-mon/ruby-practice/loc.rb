@@ -1,0 +1,1 @@
+IO readline('data.txt', '')
