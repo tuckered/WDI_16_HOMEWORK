@@ -84,8 +84,7 @@ puts word_reverse('whats up there buddy')
 # Write a function letter_reverse that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation. This will be very similar to round 4 except you won't need to split them with a space.
 
 def word_reverse(string)
-  reversed_word = string.split(' ').reverse().join(' ')
-  reversed_word.reverse()
+  reversed_word = string.split(' ').reverse().join(' ').reverse()
 end
 
 puts word_reverse('whats up there buddy')
@@ -105,7 +104,7 @@ end
 
 puts longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "supercaliereiuoier", "love"])
 
-# binding.pry
+binding.pry
 
   
 

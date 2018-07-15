@@ -10,7 +10,7 @@ a = ["Anil", "Erik", "Jonathan"]
 a[1]
 a.push('Tom')
 
-# B. Given the following data structure:
+B. Given the following data structure:
 
 h = {0 => "Zero", 1 => "One", :two => "Two", "two" => 2}
 
@@ -76,14 +76,18 @@ users["Erik"][:favorite_numbers].min
 users["Anil"][:favorite_numbers].select(&:even?)
 
 # How would you return an array of the favorite numbers common to all users?
-users["Erik"][:favorite_numbers] & users["Anil"][:favorite_numbers] & users["Jonathan"][:favorite_numbers]
+fav_common_numbers = users["Erik"][:favorite_numbers] & users["Anil"][:favorite_numbers] & users["Jonathan"][:favorite_numbers]
 
 
 # How would you return an array containing all users favorite 
 # numbers, sorted, and excluding duplicates?
-favoritenums = users["Erik"][:favorite_numbers] + users["Anil"][:favorite_numbers] + users["Jonathan"][:favorite_numbers]
+favorite_nums = users["Erik"][:favorite_numbers] + users["Anil"][:favorite_numbers] + users["Jonathan"][:favorite_numbers]
 => [8, 12, 24, 7, 12, 14, 85, 12, 42, 75]
 
-favoritenums = favoritenums.uniq.sort
+favorite_nums = favorite_nums.uniq.sort
 => [7, 8, 12, 14, 24, 42, 75, 85]
+
+result_array = users.values.map do |hash| 
+  hash[:favorite_numbers]
+end.flatten.sort.uniq
 
