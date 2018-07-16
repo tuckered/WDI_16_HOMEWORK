@@ -1,0 +1,23 @@
+<% if @movie %>
+
+  <img src="<%= @movie['Poster']%>" alt="" srcset="">
+    
+  <aside>
+    <h1><%= @movie['Title']%></h1>
+    <div>Year: <%= @movie['Year']%></div>
+    <div>Director: <%= @movie['Director']%></div>
+    <div>Cast: <%= @movie['Actors']%></div>
+    <%# <div>Rotten Tomatoes Rating:<%= @movie['Ratings'][1]['Value'] %>
+  </aside>
+
+  <footer>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </footer>
+
+<% end %>
+
+
+
+<%# <div>Metacritic Rating: <%= @movie['Ratings'][2]['Value']
+  <%#%>

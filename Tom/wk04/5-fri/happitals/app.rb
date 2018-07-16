@@ -1,9 +1,6 @@
 require_relative 'client'
 require_relative 'animal'
 
-#declare a shelter - array, harsh, custom object
-#you have permission to make the shelter a global ($in-front). everyone can see it. 
-
 $shelter = {
   :clients => [],
   :animals => []
@@ -60,15 +57,12 @@ end
 
 def show_clients()
   puts "---------------------------------------------"
-  # i = 0
   if $shelter[:clients].length == 0
     puts "There are no registered clients at this time."
-    else
-      $shelter[:clients].each do |client|
-      # i = i + 1
-      # puts "Name: #{client.name}"
-      puts "Name: #{client.name} --- Client Number: #{client.client_number}"
-    end
+  else
+    $shelter[:clients].each do |client|
+    puts "Name: #{client.name} --- Client Number: #{client.client_number}"
+  end
   end
   puts "---------------------------------------------"
 end
@@ -92,16 +86,19 @@ end
 
   
 def choose_animal()
+  puts "Please enter your client number:"
+  client_number = gets.chomp.to_i
+
   puts "Choose animal by Registration Number: "
   
   $shelter[:animals].each do |animal| 
-  puts "Name: #{animal.name} --- Registration Number: #{animal.animal_number}"
+    puts "Name: #{animal.name} --- Registration Number: #{animal.animal_number}"
   end
   
-  selection = gets.chomp.to_i
+  animal_number = gets.chomp.to_i
 
   if $shelter[:animals].each do |animal| 
-    animal.animal_number == selection
+    animal.animal_number == animal_number
     # pushes to client array but hard coded. 
     # $shelter[:clients][0].pets.push($shelter[:animals][0])
     adopt = $shelter[:animals].slice(animal.animal_number)
@@ -156,3 +153,24 @@ end
 
 require 'pry'
 binding.pry 
+
+# WAY TO SLICE PERMANETLY FROM THE ARRAY
+
+# [3] pry(main)> arr.slice[0]
+# ArgumentError: wrong number of arguments (given 0, expected 1..2)
+# from (pry):3:in `slice'
+# [4] pry(main)> arr.slice(0)_
+# SyntaxError: unexpected tIDENTIFIER, expecting end-of-input
+# arr.slice(0)_
+#             ^
+# [4] pry(main)> arr.slice(0)
+# => 1
+# [5] pry(main)> arr
+# => [1, 2, 3]
+# [6] pry(main)> new = arr.slice!(0)
+# => 1
+# [7] pry(main)> new
+# => 1
+# [8] pry(main)> arr
+# => [2, 3]
+# [9] pry(main)> 
