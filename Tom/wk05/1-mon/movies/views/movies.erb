@@ -1,21 +1,38 @@
 <% if @movie %>
 
+  <head>
+    <div class= "headBorder">
+    </div>
+  </head>
+
+  <section>
+
+    <h1>Movie Database</h1>
+    <form action="/movie_search" method="get">
+      <input class="searchBox" name="movie_name" type="text" placeholder="Search Movie...">
+      <button class="button2">Search</button>
+    </form>
+  </section>
+
+  <section class="mainDisplay">
   <img src="<%= @movie['Poster']%>" alt="" srcset="">
+    <aside>
+      <h1><%= @movie['Title']%></h1>
+      <div>Plot: <%= @movie['Plot'] %></div>
+      <div>Year: <%= @movie['Year']%></div>
+      <div>Director: <%= @movie['Director']%></div>
+      <div>Cast: <%= @movie['Actors']%></div>
+      <div>Box Office: <%= @movie['BoxOffice']%></div>
+      <% if @movie['Ratings'][2] %>
+        <div>Rotten Tomatoes Rating = <%=@movie['Ratings'][2]['Value']%></div>
+        <% else @movie['Ratings'][2] %> 
+          <div>Rotten Tomatoes Rating: N/A</div>
+      <% end %>
     
-  <aside>
-    <h1><%= @movie['Title']%></h1>
-    <div>Plot: <%= @movie['Plot'] %></div>
-    <div>Year: <%= @movie['Year']%></div>
-    <div>Director: <%= @movie['Director']%></div>
-    <div>Cast: <%= @movie['Actors']%></div>
-    <div>Box Office: <%= @movie['BoxOffice']%></div>
-    <% if @movie['Ratings'][2] %>
-      <div>Rotten Tomatoes Rating = <%=@movie['Ratings'][2]['Value']%></div>
-      <% else @movie['Ratings'][2] %> 
-        <div>Rotten Tomatoes Rating: N/A</div>
-    <% end %>
-   
-  </aside>
+    </aside>
+  </section>
+  
+    
 
   <footer>
     <a href="/">Home</a>

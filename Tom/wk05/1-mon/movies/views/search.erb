@@ -1,12 +1,16 @@
-<%# <%= @search %>
-<h1>Movie Database</h1>
-<form action="/movie_search" method="get">
+<head>
+  <div class= "headBorder">
+  </div>
+</head>
 
-  <input name="movie_name" type="text" placeholder="Search Movie...">
-  
-  <button class="button2">Search</button>
-</form>
+<section>
 
+  <h1>Movie Database</h1>
+  <form action="/movie_search" method="get">
+    <input class="searchBox" name="movie_name" type="text" placeholder="Search Movie...">
+    <button class="button2">Search</button>
+  </form>
+</section>
 
 <% @search['Search'].each do |film|%>
 
@@ -21,7 +25,4 @@
 
 <% end %>
 
-<footer>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-</footer>
+
