@@ -1,0 +1,27 @@
+<%# <%= @search %>
+<h1>Movie Database</h1>
+<form action="/movie_search" method="get">
+
+  <input name="movie_name" type="text" placeholder="Search Movie...">
+  
+  <button class="button2">Search</button>
+</form>
+
+
+<% @search['Search'].each do |film|%>
+
+  <ol>
+    <a href="/movie?movie_name=<%=film['Title'] %>">
+
+      <%= film['Title'] %>
+
+    </a>
+
+  </ol>
+
+<% end %>
+
+<footer>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+</footer>

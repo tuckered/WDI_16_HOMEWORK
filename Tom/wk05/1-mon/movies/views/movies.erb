@@ -4,10 +4,17 @@
     
   <aside>
     <h1><%= @movie['Title']%></h1>
+    <div>Plot: <%= @movie['Plot'] %></div>
     <div>Year: <%= @movie['Year']%></div>
     <div>Director: <%= @movie['Director']%></div>
     <div>Cast: <%= @movie['Actors']%></div>
-    <%# <div>Rotten Tomatoes Rating:<%= @movie['Ratings'][1]['Value'] %>
+    <div>Box Office: <%= @movie['BoxOffice']%></div>
+    <% if @movie['Ratings'][2] %>
+      <div>Rotten Tomatoes Rating = <%=@movie['Ratings'][2]['Value']%></div>
+      <% else @movie['Ratings'][2] %> 
+        <div>Rotten Tomatoes Rating: N/A</div>
+    <% end %>
+   
   </aside>
 
   <footer>
@@ -21,3 +28,9 @@
 
 <%# <div>Metacritic Rating: <%= @movie['Ratings'][2]['Value']
   <%#%>
+
+
+   <%# <% if @movie['Ratings'][2] %>
+    <%# <div> %>
+    <%# Rotten Tomatoes Rating: = @movie['Ratings'][2]['Value']  %>
+   <%# end  %>

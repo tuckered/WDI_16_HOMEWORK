@@ -1,20 +1,21 @@
 body {
-  /* display: flex; */
+  display: flex;
+  flex-wrap: wrap;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 70%;
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to bottom, #ffae4b 0%,#ff910b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  border: 10px solid white;
+  /* background: linear-gradient(to bottom, #ffae4b 0%,#ff910b 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border: 5px solid rgb(0, 0, 0);
+  box-shadow: 3px 5px rgb(243, 216, 127);
 }
 
 div {
-  background-color: rgb(243, 216, 127);
+  background-color: rgb(248, 232, 178);
   font-size: 20px;
   display: flex;
   border-bottom: 1px solid black;
-  width: 100%;
   /* border: 2px solid rgb(138, 12, 12); */
 }
 
@@ -23,6 +24,7 @@ img {
   margin-top: 30px;
   margin-left: 20px;
   box-shadow: 5px 5px 5px rgb(15, 15, 15);
+  /* border: 2px solid black; */
 }
 
 a {
@@ -37,7 +39,7 @@ aside {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
-  width: 90%;
+  width: 50%;
   /* border: 2px solid blue; */
 }
 
@@ -84,4 +86,5 @@ input {
 
 footer {
   margin-top: 30px;
+  display: flex;
 }
