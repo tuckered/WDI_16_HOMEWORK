@@ -15,14 +15,13 @@
 <% @search['Search'].each do |film|%>
 
   <ol>
-    <a href="/movie?movie_name=<%=film['Title'] %>">
-
-      <%= film['Title'] %>
+    <a href="/movie?movie_name=<%=film['imdbID']%>">
+      <%= film['Title'] %> --- <%= film['Year']%>
 
     </a>
-
   </ol>
 
 <% end %>
 
 
+<%# <%= film['Title'] %> 

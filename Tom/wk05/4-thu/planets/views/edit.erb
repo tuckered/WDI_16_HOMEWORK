@@ -1,0 +1,11 @@
+<h1>Edit Planet</h1>
+
+<form action="/planets/<%= @planets['id']%> " method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="">name</label>
+  <input type="text" name="name" value="<%= @planets['name']%>">
+  <label for="">image url</label>
+  <input type="text" name="image_url" value="<%= @planets['image_url']%>">
+  <input type="text" name="km_from_sun" value="<%= @planets['km_from_sun']%>">
+  <button>post</button>
+</form>

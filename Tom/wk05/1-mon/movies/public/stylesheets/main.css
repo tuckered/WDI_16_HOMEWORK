@@ -98,7 +98,13 @@ a {
   flex-direction: row;
   font-size: 20px;
   margin-left: 20px;
+  text-decoration: none;
+  transition: ease-in;
   /* border: 2px solid black; */
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 footer {
