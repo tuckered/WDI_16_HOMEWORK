@@ -1,12 +1,13 @@
 <h1> <%= @planets['name'] %></h1>
 <img src="<%= @planets['image_url'] %>" alt="">
+<h1> <%= @planets['km_from_sun'] %> million kilometers</h1>
 
-<form action="/planets/<%= @planets['id']%> ">
+<form action="/planets/<%= @planets['id']%> " method="post">
   <input type="hidden" name="_method" value="delete">
-  <button>delete</button>
+  <button>Delete</button>
 </form>
 
 <a href="/planets/<%= @planets['id']%>/edit">
-  <button>edit</button>
+  <button>Edit</button>
 </a>
 

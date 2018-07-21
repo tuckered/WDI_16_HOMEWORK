@@ -15,17 +15,17 @@
   </section>
 
   <section class="mainDisplay">
-  <img src="<%= @movie['Poster']%>" alt="" srcset="">
+  <img src="<%= @movie['image_url']%>" alt="" srcset="">
     <aside>
-      <h1><%= @movie['Title']%></h1>
-      <div>Plot: <%= @movie['Plot'] %></div>
-      <div>Year: <%= @movie['Year']%></div>
-      <div>Director: <%= @movie['Director']%></div>
-      <div>Cast: <%= @movie['Actors']%></div>
-      <div>Box Office: <%= @movie['BoxOffice']%></div>
-      <% if @movie['Ratings'][2] %>
-        <div>Rotten Tomatoes Rating = <%=@movie['Ratings'][2]['Value']%></div>
-        <% else @movie['Ratings'][2] %> 
+      <h1><%= @movie['title']%></h1>
+      <div>Plot: <%= @movie['plot'] %></div>
+      <div>Year: <%= @movie['year']%></div>
+      <div>Director: <%= @movie['director']%></div>
+      <div>Cast: <%= @movie['actors']%></div>
+      <div>Box Office: <%= @movie['boxoffice']%></div>
+      <% if @movie['ratings'][2] %>
+        <div>Rotten Tomatoes Rating = <%=@movie['ratings'][2]['value']%></div>
+        <% else @movie['ratings'][2] %> 
           <div>Rotten Tomatoes Rating: N/A</div>
       <% end %>
     

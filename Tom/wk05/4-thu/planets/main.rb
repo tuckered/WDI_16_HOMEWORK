@@ -18,21 +18,21 @@ get '/' do
   erb :index
 end
 
+# get '/planets/' do
+#   redirect '/'
+# end
 
+# getting the form
 get '/planets/new' do
   erb :new
 end
 
-
+# shows the planet details
 get '/planets/:id' do
   @planets = Planet.find(params[:id])
   erb :planet_details
 end
 
-get '/planets/:id/edit' do
-  @planets = Planet.find(params[:id])
-  erb :edit
-end
 
 post '/planets' do
   planet = Planet.new
@@ -44,22 +44,27 @@ post '/planets' do
   # redirect "/planets/#{ params[:planet_id] }"
 end
 
-put '/planets/:id' do
-  planet = Planet.find(params[:id])
-  planet.name = params[:name]
-  planet.image_url = params[:image_url]
-  planet.save
-  redirect "/planets/#{ params[:planet_id] }"
-end
 
-delete '/planets/:id/delete' do
+delete '/planets/:id' do
   planet = Planet.find(params[:id])
   planet.destroy
   redirect "/"
 end
 
 
+get '/planets/:id/edit' do
+  @planets = Planet.find(params[:id])
+  erb :edit
+end
 
 
+put '/planets/:id' do
+  planet = Planet.find(params[:id])
+  planet.name = params[:name]
+  planet.image_url = params[:image_url]
+  planet.km_from_sun = params[:km_from_sun]
+  planet.save
+  redirect "/planets/#{ params[:id] }"
+end
 
 

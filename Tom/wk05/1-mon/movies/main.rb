@@ -13,6 +13,11 @@ def run_sql(sql)
 end
 
 def save_to_db 
+  ratings = if @movie['Ratings'][2]
+    @movie['Ratings'][2]['Value']
+  else
+    'N/A'
+  end
   sql = "INSERT INTO movies(title, image_url, plot, year, director, actors, boxoffice, ratings, imdbid) VALUES 
   (
     '#{ @movie['Title'] }', 
@@ -22,7 +27,7 @@ def save_to_db
     '#{ @movie['Director'] }', 
     '#{ @movie['Actors'] }', 
     '#{ @movie['BoxOffice'] }', 
-    '#{ @movie['Ratings'][2]['Value'] }',
+    '#{ ratings }',
     '#{ @movie['imdbID']}'
     );"
   run_sql(sql)
@@ -43,12 +48,17 @@ end
 
 
 get '/movie' do 
-  sql  = "SELECT * FROM movies WHERE imdbid = ('#{params['imdbID']}')
-  @movie = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&i=' + params[:movie_name])
-  save_to_db()
+  sql = "SELECT * FROM movies WHERE imdbid = ('#{params['imdbID']}')"
+  result = run_sql(sql)
+  # looking at the database, seeing if there's a count of the imdbID, and if there isn't, saving it to database. 
+  if result.cmd_tuples == 0
+    @movie = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&i=' + params[:imdbID])
+    save_to_db
+    # then it accesses OUR db (sql) and selects it to display the first one that matches. 
+    sql = "SELECT * FROM movies WHERE imdbid = ('#{params['imdbID']}')"
+    @movie = run_sql(sql).first
+  else
+    @movie = result.first
+  end
   erb :movies
 end
-
-
-
-if 
