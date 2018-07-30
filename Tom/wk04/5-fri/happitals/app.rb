@@ -82,8 +82,6 @@ def show_animals()
   puts "--------------------------------------------"
 end
   
-
-
   
 def choose_animal()
   puts "Please enter your client number:"

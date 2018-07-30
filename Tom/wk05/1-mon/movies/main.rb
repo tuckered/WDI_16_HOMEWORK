@@ -53,7 +53,7 @@ get '/movie' do
   # looking at the database, seeing if there's a count of the imdbID, and if there isn't, saving it to database. 
   if result.cmd_tuples == 0
     @movie = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&i=' + params[:imdbID])
-    save_to_db
+    save_to_dbr
     # then it accesses OUR db (sql) and selects it to display the first one that matches. 
     sql = "SELECT * FROM movies WHERE imdbid = ('#{params['imdbID']}')"
     @movie = run_sql(sql).first
