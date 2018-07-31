@@ -5,8 +5,8 @@ cities.forEach(function(location) {
   var city = document.createElement("option")
   var node = document.createTextNode(location)
   city.appendChild(node)
-  var element = document.getElementById("city-type")
-  element.appendChild(city) 
+  var dropDown = document.getElementById("city-type")
+  dropDown.appendChild(city) 
 })
 
 
@@ -22,5 +22,5 @@ document.addEventListener('change', function(event) {
     background.className = 'austin'
   } else if (event.target.value === 'SYD') {
     background.className = 'sydney'
-  }
+  } else background.className = ''
 })
