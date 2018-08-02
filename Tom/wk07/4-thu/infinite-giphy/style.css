@@ -1,0 +1,57 @@
+body {
+  background-color: #272727;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.container {
+  /* border: 2px solid white; */
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+form {
+  /* border: 2px solid white; */
+  margin-top: 2em;
+}
+
+.giphySearch {
+  font-family: 'Hammersmith One', sans-serif;
+  background-color: #272727;
+  border-radius: 2px;
+  font-size: 1.5em;
+  color: #B8B8B8;
+  width: 8em;
+}
+
+.giphySearch:focus {
+  outline: none;
+  border-color: #B4EDF7;
+  box-shadow: 0 0 20px #646464;
+}
+
+.search_Btn {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 1.5em;
+  border-radius: 2px;
+  background-color: #272727;
+  color: #B8B8B8;
+}
+
+h1 {
+  /* border: 2px solid white; */
+  color: #F7365A;
+  font-size: 5em;
+}
+
+h2 {
+  /* border: 2px solid white; */
+  color: #F7365A;
+}
+
+img {
+  flex-wrap: wrap;
+  width: 35em;
+  height: 35em;
+  margin: 2em;
+}
