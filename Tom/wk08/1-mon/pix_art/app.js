@@ -17,8 +17,14 @@ for (var i = 0; i < 1000; i ++){
   var pixels = $('.pixels').append( "<div></div>" )
   $(pixels).children().addClass('square')
   
-  console.log(i)
+  
 }
+
+function changeColor() {
+  $(this).css("background-color", "green")
+}
+
+$(".square").on('click', changeColor)
 
 
 searchForm.on('click', handleSubmit)
