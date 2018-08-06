@@ -1,7 +1,33 @@
-.brush-box {
-  border: 2px solid black;
-  background-color: white;
-  height: 5vh;
-  width: 5vw;
+body {
+  /* display: flex; */
 }
 
+.container {
+  display: flex;
+  border: 1px solid black;
+  padding-bottom: 3em;
+}
+
+.brush-box {
+  border: 2px solid black;
+  /* background-color: white; */
+  height: 5vh;
+  width: 8vw;
+}
+
+
+.pixels {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  /* align-content: space-between; */
+}
+
+.square {
+  /* flex-wrap: wrap; */
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  /* background-color: aqua; */
+  
+}
