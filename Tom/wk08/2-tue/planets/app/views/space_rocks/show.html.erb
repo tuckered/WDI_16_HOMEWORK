@@ -1,7 +1,23 @@
-<h1><%= @space_rock.name%></h1>
+<header>
+  <h1><%= @space_rock.name%></h1>
+  <a href="/space_rocks">
+    <button>Home</button></a>
+</header>
 
-<img src="<%= @space_rock.image_url%>" alt="">
 
-<a href="/space_rocks/<%= @space_rock.id %>/edit">
-  Edit
-</a>
+
+  <img class="planet" src="<%= @space_rock.image_url%>" alt="">
+
+
+
+<footer>
+  <a href="/space_rocks/<%= @space_rock.id %>/edit">
+  <button>Edit</button> 
+  </a>
+
+  <form action="/space_rocks/<%= @space_rock.id%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <input type="hidden" name="_method" value="delete">
+    <button>Delete</button>
+  </form>
+</footer>

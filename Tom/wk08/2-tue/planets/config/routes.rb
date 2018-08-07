@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   put '/space_rocks/:id', to: 'space_rocks#update'
 
   #destroy
-  get '/space_rocks/:id', to: 'space_rocks#destroy'
+  delete '/space_rocks/:id', to: 'space_rocks#destroy'
 
 end

@@ -1,16 +1,22 @@
-<h1>Great big Space Rocks</h1>
+<div class="container">
+  <h1>GREAT BIG SPACE ROCKS</h1>
+
+  <%# <img class="sun" src="https://9044c4.medialib.edu.glogster.com/ZaHmFIR5rQIEPmiGSKPQ/media/44/44ff649b4ca941b5bcd0ecbd95fbd88189d80b3e/sun.png" alt=""> %>
+
+  <% @space_rocks.each do |space_rock| %>
+    <p> 
+      <a href="/space_rocks/<%= space_rock.id %>"> <%= space_rock.name%>
+      </a> 
+    </p>
+
+  <% end %>
+
+  <form action="/space_rocks/new" method="get">
+  <button>Create Planet</button>
 
 
-<% @space_rocks.each do |space_rock| %>
-  <p> 
-    <a href="/space_rocks/<%= space_rock.id %>"> <%= space_rock.name%>
-    </a> 
-  </p>
-
-<% end %>
-
-<form action="/space_rocks/new" method="get">
-<button>Create Planet</button>
+  </form>
 
 
-</form>
+</div>
+
