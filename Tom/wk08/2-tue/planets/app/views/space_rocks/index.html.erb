@@ -1,0 +1,16 @@
+<h1>Great big Space Rocks</h1>
+
+
+<% @space_rocks.each do |space_rock| %>
+  <p> 
+    <a href="/space_rocks/<%= space_rock.id %>"> <%= space_rock.name%>
+    </a> 
+  </p>
+
+<% end %>
+
+<form action="/space_rocks/new" method="get">
+<button>Create Planet</button>
+
+
+</form>

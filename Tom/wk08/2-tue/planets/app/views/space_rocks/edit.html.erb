@@ -1,0 +1,7 @@
+<form action="/space_rocks/<%= @space_rock.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="text" name="name" value="<%= @space_rock.name %>">
+  <input type="text" name="image_url" value="<%= @space_rock.image_url %>">
+  <button>update</button>
+</form>

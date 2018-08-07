@@ -15,19 +15,15 @@ body {
   width: 8vw;
 }
 
-
 .pixels {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid red;
-  /* align-content: space-between; */
+  background-size: cover;
 }
 
 .square {
-  /* flex-wrap: wrap; */
   border: 1px solid black;
   width: 20px;
   height: 20px;
-  /* background-color: aqua; */
-  
 }
+
