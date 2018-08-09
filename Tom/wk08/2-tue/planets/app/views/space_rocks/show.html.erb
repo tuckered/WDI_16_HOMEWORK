@@ -9,6 +9,14 @@
   <img class="planet" src="<%= @space_rock.image_url%>" alt="">
 
 
+<form action="/comments" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="hidden" name="space_rocks_id" value="<%=@space_rock.id%>">
+  <input type="text" name="body" value="<%= @comments.body%>">
+
+</form>
+
+
 
 <footer>
   <a href="/space_rocks/<%= @space_rock.id %>/edit">

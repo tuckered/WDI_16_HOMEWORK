@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   # resources :space_rocks
 
   # create
@@ -15,6 +16,6 @@ Rails.application.routes.draw do
   put '/space_rocks/:id', to: 'space_rocks#update'
 
   #destroy
-  delete '/space_rocks/:id', to: 'space_rocks#destroy'
+  get '/space_rocks/:id', to: 'space_rocks#destroy'
 
 end
