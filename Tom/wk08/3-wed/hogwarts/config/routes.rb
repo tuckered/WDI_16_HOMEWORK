@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   root "houses#index"
 
-  resources :houses, only: [:index, :show]
-  resources :students, only: [:index,:show]
+  resources :houses
+  resources :students
 
   
   # get '/houses', to: '/houses#index'
